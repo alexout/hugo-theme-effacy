@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-
 <html class="no-js" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
     <head>
     {{ partial "head.html" . }}
     </head>
     <body>
-    {{ partial "nav.html" . }}
-    {{ partial "hero.html" . }}
-    {{ partial "about.html" . }}
-    {{ partial "services.html" . }}
-    {{ partial "testimonials.html" . }}}
-    {{ partial "portfolio.html" . }}
-    {{ partial "partners.html" . }}
-    {{ partial "prices.html" . }}
-    {{ partial "awards.html" . }}
-    {{ partial "blog.html" . }}
-    {{ partial "contact.html" . }}
-    {{ partial "gmap.html" . }}
+      {{ partial "nav.html" . }}
+      {{ partial "hero.html" . }}
+      {{ if .Site.Params.about.enable }}
+        {{ partial "about.html" . }}
+      {{ end }}
+      {{ if .Site.Params.services.enable }}
+        {{ partial "services.html" . }}
+      {{ end }}
+      {{ if .Site.Params.testimonials.enable }}
+        {{ partial "testimonials.html" . }}}
+      {{ end }}
+      {{ if .Site.Params.portfolio.enable }}
+        {{ partial "portfolio.html" . }}
+      {{ end }}
+      {{ if .Site.Params.partners.enable }}
+        {{ partial "partners.html" . }}
+      {{ end }}
+      {{ if .Site.Params.prices.enable }}
+        {{ partial "prices.html" . }}
+      {{ end }}
+      {{ if .Site.Params.awards.enable }}
+        {{ partial "awards.html" . }}
+      {{ end }}
+      {{ if .Site.Params.blog.enable }}
+        {{ partial "blog.html" . }}
+      {{ end }}
+      {{ if .Site.Params.contact.enable }}
+        {{ partial "contact.html" . }}
+      {{ end }}
+      {{ if .Site.Params.gmap.enable }}
+        {{ partial "gmap.html" . }}
+    {{ end }}
     {{ partial "footer.html" . }}
     {{ partial "js.html" . }}
     </body>
