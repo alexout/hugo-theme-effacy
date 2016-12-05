@@ -1,7 +1,7 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 title = "Effacy - Creative One Page Theme"
 languageCode = "en-us"
-theme = "hugo-effacy-theme"
+theme = "hugo-theme-effacy"
 
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
