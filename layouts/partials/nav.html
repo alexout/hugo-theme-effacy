@@ -1,0 +1,32 @@
+{{ "<!-- Header Area Start -->" | safeHTML }}
+<header class="header-area">
+    {{ "<!-- Navigation start -->" | safeHTML }}
+    <nav class="navbar navbar-custom tb-nav" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tb-nav-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><h2>{{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}</h2></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="tb-nav-collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+            {{ range .Site.Params.navigation.menu }}
+              {{ if eq .section "home" }}
+                <li class="active"><a class="page-scroll" href="#top">{{.name}}</a></li>
+              {{ else }}
+                <li><a class="page-scroll" href="#{{ .section }}">{{ .name }}</a></li>
+              {{ end }}
+            {{ end }}
+            </ul>
+          </div>
+        </div>
+    </nav>
+    {{ "<!-- Navigation end -->" | safeHTML }}
+</header>
+{{ "<!-- Header end -->" | safeHTML }}

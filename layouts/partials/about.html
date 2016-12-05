@@ -1,0 +1,39 @@
+{{ "<!-- About Us Section -->" | safeHTML }}
+
+<section class="about-us" id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 no-padding">
+                {{ "<!-- About Us Left -->" | safeHTML }}
+                <div class="about-us-left">
+                    {{ "<!-- About Us Info -->" | safeHTML }}
+                    <h2 class="section-title-left">{{ with .Site.Params.about.title }}{{ . | markdownify }}{{ end }}</h2>
+                    <p>{{ with .Site.Params.about.description }}{{ . | markdownify }}{{ end }}</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 no-padding">
+                {{ "<!-- About Us Right -->" | safeHTML }}
+                <div class="about-us-right">
+                    {{ $NumberOfFeatures := len .Site.Data.about.features }}
+                    {{ range $i, $feature := .Site.Data.about.features }}
+                    {{ with $feature }}
+                    {{ "<!-- Our Features -->" | safeHTML }}
+                    <div class="media">
+                        <div class="media-left {{if ne (add $i 1) $NumberOfFeatures }} dotted {{ end }}">
+                            <i class="fa {{ .icon }}"></i>
+                        </div>
+                        <div class="media-body">
+                            {{ "<!-- About Right Title -->" | safeHTML }}
+                            <h3 class="media-heading">{{ .title }}</h3>
+                            <p> {{ .description }} </p>
+                        </div>
+                    </div>
+                    {{end}}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ "<!-- End Of About Us Section -->" | safeHTML }}

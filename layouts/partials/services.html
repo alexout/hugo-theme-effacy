@@ -1,0 +1,30 @@
+<!-- Our Services -->
+
+<section class="our-services-section section-padding" id="service">
+    <div class="container">
+        <!-- Our service Section Title -->
+        <h2 class="section-title text-center">{{ with .Site.Params.services.title }}{{ . | markdownify }}{{ end }}</h2>
+        <!-- Our service  Section Subtitle -->
+        <p class="sub-title text-center">{{ with .Site.Params.services.description }}{{ . | markdownify }}{{ end }} </p>
+
+        <div class="row our-services">
+            {{ range .Site.Data.services.items }}
+            <!-- Single Service -->
+            <div class="col-md-6 col-lg-5 col-sm-12 col-lg-offset-1 col-xs-12 single-service">
+                <div class="media">
+                    <div class="media-left">
+                        <i class="fa {{ .icon }}"></i>
+                    </div>
+                    <div class="media-body">
+                        <!-- Single service title -->
+                        <h3 class="media-heading">{{ .title | markdownify }}</h3>
+                        <p>{{ .description | markdownify }}</p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- End Of Our Services -->

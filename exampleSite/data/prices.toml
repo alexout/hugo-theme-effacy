@@ -1,0 +1,38 @@
+[[items]]
+  price = "$27"
+  title = "Standard"
+  description = """
+* Advance protection
+* Life time license
+* 24/7 fre support
+* 30 days guarentee
+"""
+  btnText = "Get Started"
+  btnOnClick = "#"
+  activeTable = false
+
+[[items]]
+  price = "$50"
+  title = "Premium"
+  description = """
+* Advance protection
+* Life time license
+* 24/7 fre support
+* 30 days guarentee
+"""
+  btnText = "Get Started"
+  btnOnClick = "#"
+  activeTable = true
+
+[[items]]
+  price = "$100"
+  title = "Ultimate"
+  description = """
+* Advance protection
+* Life time license
+* 24/7 fre support
+* 30 days guarentee
+"""
+  btnText = "Get Started"
+  btnOnClick = "#"
+  activeTable = false

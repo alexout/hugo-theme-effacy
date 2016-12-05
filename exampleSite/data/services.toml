@@ -1,0 +1,16 @@
+[[items]]
+   icon = "fa-laptop"
+   title = "Ux/Ui Design"
+   description = "Lorem ipsum dolor sit amet, tetur adipisicing elit. Ut enim ad minim tae vitae dicta sunt explicabo."
+[[items]]
+   icon = "fa-modx"
+   title = "Creative Layout"
+   description = "Lorem ipsum dolor sit amet, tetur adipisicing elit. Ut enim ad minim tae vitae dicta sunt explicabo."
+[[items]]
+    icon = "fa-binoculars"
+    title = "Retina Ready"
+    description = "Lorem ipsum dolor sit amet, tetur adipisicing elit. Ut enim ad minim tae vitae dicta sunt explicabo."
+[[items]]
+   icon = "fa-code"
+   title = "Valid Markup"
+   description = "Lorem ipsum dolor sit amet, tetur adipisicing elit. Ut enim ad minim tae vitae dicta sunt explicabo."

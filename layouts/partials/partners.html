@@ -1,0 +1,18 @@
+<!-- Our Partners Section -->
+
+<section class="our-partners-section">
+    <div class="container">
+        <div class="row">
+            <!-- Our Partners Carousel -->
+            <div id="partners-carousel" class="owl-carousel owl-theme">
+                {{ range .Site.Data.partners.items }}
+                <div class="item">
+                    <img class="img-responsive center-block" src="{{ $.Site.Params.partners.path }}{{ .file }}" alt="{{ .alt }}">
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Of Our Partners Section -->

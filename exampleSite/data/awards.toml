@@ -1,0 +1,16 @@
+[[items]]
+  icon = "fa-shopping-basket"
+  description = "Products done"
+  number = 245
+[[items]]
+  icon = "fa-birthday-cake"
+  description = "Awards won"
+  number = 369
+[[items]]
+  icon = "fa-bar-chart"
+  description = "Happy clients"
+  number = 1333357016
+[[items]]
+  icon = "fa-code"
+  description = "Lines of Code"
+  number = 25000

@@ -1,0 +1,17 @@
+{{ "<!-- Awards Section -->" | safeHTML }}
+<section class="our-awards-section">
+    <div class="container">
+        {{ "<!-- Awards Counter -->" | safeHTML }}
+        <div class="row text-center our-awards-padding">
+            {{ range .Site.Data.awards.items }}
+            {{ "<!-- Awards Item -->" | safeHTML }}
+            <div class="col-sm-3 col-xs-12 awards-counter">
+                <i class="fa {{ .icon }}"></i>
+                <strong><span class="timer">{{ .number }}</span></strong>
+                <span class="count-description">{{ .description | markdownify }}</span>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ "<!-- End Of Awards Section -->" | safeHTML }}

@@ -1,0 +1,14 @@
+{{ "<!-- hero-section -->" | safeHTML }}
+<section class="hero-section static-bg" id="top">
+        <div class="slider-caption">
+            <div class="container">
+                <div class="row">
+                    {{ "<!-- Hero Title -->" | safeHTML }}
+                    <h1>{{ with .Site.Params.hero.title }}{{ . | markdownify }}{{ end }}</h1>
+                    {{ "<!-- Hero Subtitle -->" | safeHTML }}
+                    <h5>{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</h5>
+                </div>
+            </div>
+        </div>
+</section>
+{{ "<!-- End Of Hero Section -->" | safeHTML }}

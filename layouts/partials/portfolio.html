@@ -1,0 +1,46 @@
+{{ "<!-- Portfolio Section Starts Here -->" | safeHTML }}
+<section class="protfolio-section section-padding" id="portfolio">
+    <div class="container-fluid">
+        {{ "<!-- Portfolio Section Title -->" | safeHTML }}
+        <h2 class="section-title text-center">{{ with .Site.Params.portfolio.title }}{{ . | markdownify }}{{ end }}</h2>
+        <p class="sub-title text-center">{{ with .Site.Params.portfolio.description }}{{ . | markdownify }}{{ end }}</p>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center portfolio-filter mt-30 mb-30">
+                {{ "<!-- Portfolio Filter Navigation -->" | safeHTML }}
+                <div class="portfolio-filter-nav btn-group">
+                    <ul id="filter" class="nav">
+                        <li class="active" data-group="all">All</li>
+                        <li data-group="webdesign">Web design</li>
+                        <li data-group="photography">Photography</li>
+                        <li data-group="people">People</li>
+                    </ul>
+                </div>
+            </div>
+
+            {{ "<!-- Portfolio Showcase -->" | safeHTML }}
+            <div class="portfolio-showcase">
+                {{ "<!-- Showcase Grid -->" | safeHTML }}
+                <div id="grid" class="clearfix">
+                    {{ range .Site.Data.portfolio.items }}
+                    {{ "<!-- Single Portfolio Item -->" | safeHTML }}
+                    <div class="thumbnails" data-groups='[{{ range .groups }}"{{ . }}", {{ end }}"all"]'>
+                        <a href="{{ $.Site.Params.portfolio.path.betterview }}{{ .image }}">
+                            <img src="{{ $.Site.Params.portfolio.path.preview }}{{ .image }}" alt="">
+                            <span class="portfolio-overlay">
+                                <i class="fa fa-plus"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ "<!-- Portfolio Gallery Button -->" | safeHTML }}
+            <div class="portfolio-button text-center mt-50">
+                <button class="btn btn-primary portfolio-btn">Load More</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+{{ "<!-- End of Portfolio Section Starts Here -->" | safeHTML }}

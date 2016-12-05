@@ -1,0 +1,125 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+title = "Effacy - Creative One Page Theme"
+languageCode = "en-us"
+theme = "hugo-effacy-theme"
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[params]
+# Header configuration
+# Metadata for search engines
+name = "Your name"
+description = "Your description"
+keywords = "Your keywords"
+
+# You can use one of the available theme colors
+# color = color-green
+# color = color-blue
+# color = color-aqua
+# color = color-purple
+color = "default-color"
+
+# Link to custom js and css relative to /static
+custom_css = []
+custom_js  = []
+
+brand = "eff**acy**"
+
+# Navigation
+[params.navigation]
+  [[params.navigation.menu]]
+    section = "home"
+    name = "Home"
+  [[params.navigation.menu]]
+    section = "about"
+    name = "About"
+  [[params.navigation.menu]]
+    section = "testimonial"
+    name = "Testimonial"
+  [[params.navigation.menu]]
+    section = "portfolio"
+    name = "Portfolio"
+  [[params.navigation.menu]]
+    section = "pricing"
+    name = "Pricing"
+  [[params.navigation.menu]]
+    section = "blog"
+    name = "Blog"
+  [[params.navigation.menu]]
+    section = "contact"
+    name = "Contact Us"
+
+# Hero section
+[params.hero]
+  title = "welcome to **effacy**"
+  subtitle = "we advice + we design + we develope"
+
+# About section
+[params.about]
+  enable = true
+  title = "About our design"
+  description = "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod ."
+  # content is displayed from site's data/about
+
+  # Services section
+  [params.services]
+   enable = true
+   title = "What we do"
+   description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, magna aliqua.Ut enim <br> consectetur adipisicing  ad minim veniam"
+   # Services are defined in site's data/services
+
+  # Testimonials section
+  [params.testimonials]
+    enable = true
+    # Testimonials defined in site's data/testimonials
+
+  # Portfolio section
+  [params.portfolio]
+    enable = true
+    title = "Our portfolio"
+    description = """
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, magna aliqua.Ut enim
+consectetur adipisicing  ad minim veniam
+    """
+    # Portfolio items defined in site's data/portfolio
+    [params.portfolio.path]
+      preview = "img/portfolio/"
+      betterview = "img/portfolio/better-view/"
+
+  # Partners section
+  [params.partners]
+    enable = true
+    path = "img/partners/"
+    # partners defined in site's data/partners
+
+  # Prices section
+  [params.prices]
+    enable = true
+    title = "Pricing and Plans"
+    description = """
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, magna aliqua.Ut enim
+
+consectetur adipisicing  ad minim veniam
+"""
+  # Prices are defined in site's data/prices
+
+  # Awards section
+  [params.awards]
+    enable = true
+
+  # Blog section
+  # TODO
+  # Section is currently a template only, need to be overrieden by site
+  [params.blog]
+    enable = true
+
+  # Contact us
+  [params.contact]
+    enable = true
+    sendTo = "youremail@example.com"
+
+  # Google Map
+  [params.gmap]
+    enable = true
+    # TODO - define coordinates via config file

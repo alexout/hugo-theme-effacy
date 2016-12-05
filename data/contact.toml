@@ -1,0 +1,33 @@
+# All fields but the message will be rendered as inputs
+# In the left column
+[form.fields.name]
+  placeholder = "Name"
+  name = "name"
+  type = "text"
+  icon = "fa-user"
+  required = true
+[form.fields.email]
+  placeholder = "Email"
+  name = "_replyto"
+  type = "email"
+  icon = "fa-envelope"
+  required = true
+[form.fields.subject]
+  placeholder = "Subject"
+  name = "subject"
+  type = "text"
+  icon = "fa-pencil"
+  required = true
+# Message will be rendered as text area
+# in the right column
+[form.fields.message]
+  placeholder = "Message"
+  rows = 7
+  name = "message"
+  icon = "fa-keyboard-o"
+  required = true
+
+# Submit button
+[form.button]
+  icon = "fa-paper-plane"
+  text = "Send"

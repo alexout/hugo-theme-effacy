@@ -1,0 +1,36 @@
+[[items]]
+  image = "web-design1.jpg"
+  groups = ["webdesign"]
+[[items]]
+  image = "photography1.jpg"
+  groups = ["photography"]
+[[items]]
+  image = "people1.jpg"
+  groups = ["people"]
+[[items]]
+  image = "photography4.jpg"
+  groups = ["photography"]
+[[items]]
+  image = "web-design2.jpg"
+  groups = ["webdesign"]
+[[items]]
+  image = "people2.jpg"
+  groups = ["people"]
+[[items]]
+  image = "photography2.jpg"
+  groups = ["photography"]
+[[items]]
+  image = "people4.jpg"
+  groups = ["people"]
+[[items]]
+  image = "web-design3.jpg"
+  groups = ["webdesign"]
+[[items]]
+  image = "photography3.jpg"
+  groups = ["photography"]
+[[items]]
+  image = "people3.jpg"
+  groups = ["people"]
+[[items]]
+  image = "web-design4.jpg"
+  groups = ["webdesign"]

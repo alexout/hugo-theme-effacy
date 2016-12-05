@@ -1,0 +1,37 @@
+{{ "<!-- Pricing And Plans Section -->" | safeHTML }}
+
+<section class="pricing-section section-padding" id="pricing">
+    <div class="container">
+        {{ "<!-- Pricing Section Title -->" | safeHTML }}
+        <h2 class="section-title text-center">{{ with .Site.Params.prices.title }}{{ . | markdownify }}{{ end }}</h2>
+        <p class="sub-title text-center">{{ with .Site.Params.prices.description }}{{ . | markdownify }}{{ end }}</p>
+
+        <div class="row mt-80 text-center">
+            {{ range .Site.Data.prices.items }}
+            {{ "<!-- Pricing Table -->" | safeHTML }}
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="single-pricing-table {{ if (.activeTable) }}table-active{{ end }}">
+                    {{ "<!-- Pricing Table Price -->" | safeHTML }}
+                    <div class="price">
+                        <h1>{{  .price | markdownify }}</h1>
+                    </div>
+                    {{ "<!-- Pricing Table Title -->" | safeHTML }}
+                    <div class="pricing-title">
+                        <h2>{{ .title | markdownify }}</h2>
+                    </div>
+                    {{ "<!-- Pricing Package Items -->" | safeHTML }}
+                    <div class="package-item">
+                      {{ .description | markdownify }}
+                    </div>
+                    {{ "<!-- Pricing Buy Button -->" | safeHTML }}
+                    <div class="pricing-buttons">
+                        <button class="btn-primary buy-btn" onclick="{{ .btnOnClick }}">{{ .btnText | markdownify }}</button>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ "<!-- End Of Pricing And Plans Section -->" | safeHTML }}
