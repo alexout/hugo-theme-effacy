@@ -41,7 +41,7 @@ brand = "eff**acy**"
     section = "portfolio"
     name = "Portfolio"
   [[params.navigation.menu]]
-    section = "pricing"
+    section = "prices"
     name = "Pricing"
   [[params.navigation.menu]]
     section = "blog"
